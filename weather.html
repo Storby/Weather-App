@@ -1,0 +1,128 @@
+<!doctype html>
+<!--Enonic Weather app
+    by Vebjørn Løke
+//-->
+<head>
+    <link rel="stylesheet" href="weather.css"> <!--Main CSS Folder-->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><!--Charset-->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet"><!--Google font Montserrat-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> <!--Font Awesome-->
+</head>
+<body>
+    <header>Weather  app </header>
+
+    <!--Main cointainer for weather app-->
+    <div style="text-align:center;">
+        <div class="weatherContainer">
+
+            <!--First container for city-->
+            <div class="weatherTileFrame">
+                <div class="weatherTile">
+                    <div class="city" id="city0"></div>
+
+                    <!--Top section-->
+                    <div class="featured">
+                        <div class="temp" id="temp0"></div>
+                        <div class="infoBox">
+                            <i id="weatherIcon0" class="fas"></i> <span id="weatherStatus0"></span><br>
+                            <i class="fas fa-wind" title="wind speed and direction"></i> <span id="wind0"></span><br>
+                            <i class="fas fa-cloud" title="cloudiness"></i> <span id="cloud0"></span>
+                        </div>
+                        <div style="clear:both;"></div>
+                    </div>
+                    
+                    <!--Mid section-->
+                    <div id="historyFrame">
+                        <div class="headerText">History</div>
+                        <ul id="historyArea0"></ul>
+                    </div>
+
+                    <!--Bottom section-->
+                    <div id="weatherTileFooter0" class="weatherTileFooter">
+                        <div id="highTemp0"><i class="fas fa-caret-up"></i></div>
+                        <div id="pressure0">Pressure </div>
+                        <div id="lowTemp0"><i class="fas fa-caret-down"></i></div>
+                        <div id="humidity0">Humidity</div>
+                    </div>
+                </div>
+            </div>
+
+            <!--Second container for city-->
+            <div class="weatherTileFrame">
+                <div class="weatherTile">
+                    <div class="city" id="city1"></div>
+
+                    <!--Top section-->
+                    <div class="featured">
+                        <div class="temp" id="temp1"></div>
+                        <div class="infoBox">
+                            <i id="weatherIcon1" class="fas"></i> <span id="weatherStatus1"></span><br>
+                            <i class="fas fa-wind" title="wind speed and direction"></i> <span id="wind1"></span><br>
+                            <i class="fas fa-cloud"></i> <span id="cloud1"></span>
+                        </div>
+                        <div style="clear:both;"></div>
+                    </div>
+                    
+                     <!--Mid section-->
+                    <div id="historyFrame">
+                        <div class="headerText">History</div>
+                        <ul id="historyArea1"></ul>
+                    </div>
+
+                    <!--Bottom section-->
+                    <div id="weatherTileFooter1" class="weatherTileFooter">
+                        <div id="highTemp1"></div>
+                        <div id="pressure1">Pressure </div>
+                        <div id="lowTemp1"></div>
+                        <div id="humidity1">Humidity</div>
+                    </div>
+                </div>
+            </div>
+
+            <!--Third container for city-->
+            <div class="weatherTileFrame">
+                <div class="weatherTile">
+                    <div class="city" id="city2"></div>
+
+                    <!--Top section-->
+                    <div class="featured">
+                        <div class="temp" id="temp2"></div>
+                        <div class="infoBox">
+                            <i id="weatherIcon2" class="fas"></i> <span id="weatherStatus2"></span><br>
+                            <i class="fas fa-wind" title="wind speed and direction"></i> <span id="wind2"></span><br>
+                            <i class="fas fa-cloud"></i> <span id="cloud2"></span>
+                        </div>
+                        <div style="clear:both;"></div>
+                    </div>
+
+                    <!--Mid section-->
+                    <div id="historyFrame">
+                        <div class="headerText">History</div>
+                        <ul id="historyArea2"></ul>
+                    </div>
+
+                    <!--Bottom section-->
+                    <div id="weatherTileFooter2" class="weatherTileFooter">
+                        <div id="highTemp2"><i class="fas fa-caret-up"></i></div>
+                        <div id="pressure2">Pressure </div>
+                        <div id="lowTemp2"><i class="fas fa-caret-down"></i></div>
+                        <div id="humidity2">Humidity</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Timer-->
+    <div style="position:relative;">
+        <h1 id = "timerClock" style="font-size:60px;text-align: center; color:#234863"></h1>
+    </div>
+
+    <footer>Powered using OpenWeatherMap.org , created by Vebjørn Løke</footer>
+
+    <!--Javascript-->
+    <script src="moment.js"></script> 
+    <script src="weather.js"></script>
+    <script>updateWeather();</script>
+</body>
+</html>
