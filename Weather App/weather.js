@@ -1,22 +1,22 @@
 //weather updater
-function updateWeather(){
+function updateWeather() {
 
     //Making the api call
     const request = new XMLHttpRequest();
     const key = '60074bfa23342a1d7b17dfd7a4711d69'; //API Key
-    const cities = 'group?id=6453366,2643743,1848354'; //Left-right ID for OSLO, LONDON, MINSK
+    const cities = 'group?id=6453366,2643743,764679'; //left-right ID for OSLO, LONDON, MINSK
 
     const url = 'http://api.openweathermap.org/data/2.5/' + cities+'&weather?id=524901&APPID=' + key + '&units=metric';
 
-     //Making the api call
+     //making the api call, GETing the information
     request.open('GET', url);
 
     //gather weather information
-    request.onload = function(){
+    request.onload = function() {
         var data = JSON.parse(this.response);
 
         //loops through the 3 destinations
-        for(i = 0; i<3; i++){
+        for(i = 0; i<3; i++) {
 
             //pulling content out and replaces the visual content of weather boxes
             document.getElementById('city' +i).innerHTML = data.list[i].name;
@@ -25,7 +25,7 @@ function updateWeather(){
             document.getElementById('weatherStatus' +i).innerHTML = data.list[i].weather['0'].description;
             document.getElementById('cloud' +i).innerHTML = data.list[i].clouds.all + '%';
 
-            //Content in bottombox
+            //content in bottombox
             document.getElementById('highTemp' +i).innerHTML = '<i class="fas fa-caret-up"></i> '+ Math.round(data.list[i].main.temp_max) + '&deg; Max temp';
             document.getElementById('lowTemp' +i).innerHTML = '<i class="fas fa-caret-down"></i> '+ Math.round(data.list[i].main.temp_min) + '&deg; Min temp';
             document.getElementById('pressure' +i).innerHTML = '<i class="fas fa-tachometer-alt"></i> '+ data.list[i].main.pressure + ' Pressure';
@@ -33,12 +33,12 @@ function updateWeather(){
 
 
             //a switch desides what icon to use for weather description
-            switch(data.list[i].weather['0'].description){
+            switch(data.list[i].weather['0'].description) {
                 case 'clear sky':
                     if(moment().hour() < 20 && moment().hour() > 6) {
                         icon = 'fa-sun';
                     } else {
-                        icon = 'fa-moon'
+                        icon = 'fa-moon';
                     }
                     break;
                 case 'few clouds':
@@ -114,7 +114,7 @@ function updateWeather(){
             //adds the icon
             document.getElementById('weatherIcon' +i).classList.add(icon);
             
-            //Get the time, and use format hh:mm:ss
+            //get the time, and use format hh:mm:ss
             var time = moment().format('HH:mm');
 
             //creates a list with clock and icons
@@ -129,7 +129,7 @@ function updateWeather(){
             historyArea.insertBefore(listItem, historyArea.childNodes[0]);
 
             //short code to remove old history when not needed
-            if(historyArea.getElementsByTagName('li').length > 4 ){
+            if(historyArea.getElementsByTagName('li').length > 4 ) {
                 historyArea.removeChild(historyArea.lastChild);
             }
         }
@@ -137,13 +137,13 @@ function updateWeather(){
     request.send();
 }
 
-//Updating weather view
-setInterval(function(){
+//updating weather view
+setInterval(function() {
     updateWeather();
 }, 60000); 
 
 //clock for referance
-setInterval(function(){
+setInterval(function() {
     var time = moment().format('HH:mm:ss');
     document.getElementById('timerClock').innerHTML = time;
 }, 1000);

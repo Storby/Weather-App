@@ -1,21 +1,8 @@
 body {
     margin:0;
-    /* background-color:#333; */
     font-family: 'Montserrat', sans-serif !important;
 }
-ul {
-    line-height:2.5;
-    list-style: none;
-    margin:0;
-    padding:0;
-    max-height: 160px;
-    overflow: hidden;
-}
-li {
-    width:100%;
-    font-weight: normal !important;
-    font-family: 'Montserrat', sans-serif !important;
-}
+
 header {
     background-color:#234863;
     text-transform: uppercase;
@@ -27,6 +14,7 @@ header {
     text-align: center;
     font-size:32px;
 }
+
 footer {
     background-color:#234863;
     color:#fff;
@@ -37,6 +25,22 @@ footer {
     position: absolute;
     bottom:0;
 }
+
+ul {
+    line-height:2.5;
+    list-style: none;
+    margin:0;
+    padding:0;
+    max-height: 160px;
+    overflow: hidden;
+}
+
+li {
+    width:100%;
+    font-weight: normal !important;
+    font-family: 'Montserrat', sans-serif !important;
+}
+
 .weatherContainer {
     display: inline-block;
     box-sizing: border-box;
@@ -45,8 +49,8 @@ footer {
     max-width:1400px;
     text-align: center;
 }
+
 .weatherTile {
-    display: inline-block;
     position: relative;
     box-shadow: 0px 8px 14px 2px #c5c5c5;
     background: #69a0c7;
@@ -56,6 +60,7 @@ footer {
     width: 90%;
     padding-top:20px;
 }
+
 .weatherTileFooter {
     color:#555;
     background-color:#f7f7f7;
@@ -66,8 +71,8 @@ footer {
     box-sizing: border-box;
     bottom:0px;
     left:0;
-    display: inline-block;
 }
+
 .weatherTileFooter div{
     width:50%;
     float:left;
@@ -76,31 +81,37 @@ footer {
     font-weight: normal !important;
     font-family: 'Montserrat', sans-serif !important;
 }
+
 .weatherTileFrame {
     float: left;
     width:33.33%;
     text-align: center;
 }
+
 .featured{
     box-shadow: 0px 38px 50px 0px #5495c3;
     margin: 4px 20px;
 }
+
 .nameTile {
     font-size: 36px;
     width:33.33%;
     float:left;
     text-align: center;
 }
+
 .city {
     font-size:20px;
     text-transform: uppercase;
     letter-spacing: 1px;
 }
+
 .temp {
     font-size: 90px;
     float:left;
     width: 50%;
 }
+
 .infoBox {
     width: 50%;
     float:left;
@@ -108,16 +119,18 @@ footer {
     text-align: left;
     line-height: 1.7;
 }
+
 #historyFrame {
     padding:20px;
 }
+
 .headerText{
     border-bottom: 1px solid #f7f7f7;
     padding-bottom: 8px;
     margin-bottom:4px;
 }
 
-/*Font- awesome*/
+/*Font Awesome*/
 .fa-sun:before, .fa-moon:before, .fa-cloud-sun:before, .fa-cloud:before, 
 .fa-smog:before, .fa-cloud-showers-heavy:before, .fa-cloud-sun-rain:before,
 .fa-bolt:before, .fa-snowflake:before, .fa-water:before, .fa-caret-up:before,
