@@ -130,6 +130,10 @@ li {
     margin-bottom:4px;
 }
 
+#timerClock {
+    margin-bottom:150px;
+}
+
 /*Font Awesome*/
 .fa-sun:before, .fa-moon:before, .fa-cloud-sun:before, .fa-cloud:before, 
 .fa-smog:before, .fa-cloud-showers-heavy:before, .fa-cloud-sun-rain:before,
@@ -148,9 +152,5 @@ li {
     .weatherTileFrame {
         width:100%;
         margin-bottom:20px;
-    }
-    
-    #timerClock {
-        margin-bottom:100px;
     }
 }
