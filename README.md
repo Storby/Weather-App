@@ -1,3 +1,4 @@
 # Weather-App
 
-Download the Folder and run weather.html in your browser.
+1. Download or clone Weather-App 
+2. Run weather.html in your browser.
