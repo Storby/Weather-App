@@ -138,3 +138,11 @@ li {
     font-weight:900;
     font-family: "Font Awesome 5 Free" !important;
 }
+
+@media only screen and (max-width: 1000px){
+    .weatherTileFrame {
+        float: left;
+        width:100%;
+        text-align: center;
+    }
+}
